@@ -73,14 +73,21 @@
             background-color: rgb(190, 10, 40);
             display: flex;
         }
-        .number{
+        .title .number{
             font-size: 150px;
+            width: 115px;
             transform: rotate(90deg);
         }
-        .title p{
+        .title .txt{
+            width: 285px;
+            box-sizing: border-box;
             font-size: 60px;
             padding-top: 60px;
             padding-left: 10px;
+            padding-right: 10px;
+        }
+        section:nth-of-type(even) .title .txt{
+            text-align: right;
         }
         .content{
             font-size: 22px;
@@ -207,8 +214,8 @@
         <section>
             <div class="advantage">
                 <div class="title">
-                    <div class="number">01</div>
-                    <p>操控樂趣</p>
+                    <p class="number">01</p>
+                    <p class="txt">操控樂趣</p>
                 </div>
                 <div class="content">
                     <p>人人滿意的駕駛體驗</p>
@@ -246,8 +253,8 @@
         <section>
             <div class="advantage">
                 <div class="title">
-                    <div class="number">02</div>
-                    <p>安全守護</p>
+                    <p class="txt">安全守護</p>
+                    <p class="number">02</p>
                 </div>
                 <div class="content">
                     <p>行車更安心的高剛性車體</p>
@@ -281,8 +288,8 @@
         <section>
             <div class="advantage">
                 <div class="title">
-                    <div class="number">03</div>
-                    <p>乘坐舒適</p>
+                    <p class="number">03</p>
+                    <p class="txt">乘坐舒適</p>
                 </div>
                 <div class="content">
                     <p>令人放鬆舒適的車室空間</p>
@@ -320,8 +327,8 @@
         <section>
             <div class="advantage">
                 <div class="title">
-                    <div class="number">04</div>
-                    <p>以人為本</p>
+                    <p class="txt">以人為本</p>
+                    <p class="number">04</p>
                 </div>
                 <div class="content">
                     <p>使用者導向的貼心設計</p>
@@ -355,8 +362,8 @@
         <section>
             <div class="advantage">
                 <div class="title">
-                    <div class="number">05</div>
-                    <p>引以為傲</p>
+                    <p class="number">05</p>
+                    <p class="txt">引以為傲</p>
                 </div>
                 <div class="content">
                     <p>極具吸引力的精心設計</p>
