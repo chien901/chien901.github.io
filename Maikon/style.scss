@@ -13,6 +13,10 @@ $ad-bg: #2570ff;
 $ad-card-bg: rgba(255, 255, 255, 0.12);
 $pj-txt-bg: #1fde82f8;
 $bk-bg: #b7ccf81f;
+:target{
+    padding-top: 300px !important;
+    margin-top: -300px !important;
+}
 .container{
     font-family: "Roboto", Sans-serif;
     font-size: 14px;
