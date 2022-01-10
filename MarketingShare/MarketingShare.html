@@ -130,9 +130,9 @@
             thead.append(theadTr);
             marketingShare.data.forEach(item => {
                 let tbodyTr = document.createElement("tr");
-                Object.keys(item).forEach(key =>{
+                Object.values(item).forEach(value =>{
                     let td = document.createElement("td");
-                    td.innerText = item[key];
+                    td.innerText = value;
                     tbodyTr.append(td);
                 });                
                 tbody.append(tbodyTr);
