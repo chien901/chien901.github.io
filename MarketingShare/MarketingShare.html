@@ -67,7 +67,7 @@
 
             drawPieChart(companies, data);
             
-            createTable();
+            createTable(marketingShare.titles, marketingShare.data);
         }
     </script>
 
@@ -117,18 +117,18 @@
             });
         }
     
-        function createTable(){
+        function createTable(titles,datas){
             let table = document.querySelector("table");
             let thead = document.createElement("thead");
             let tbody = document.createElement("tbody");
             let theadTr = document.createElement("tr");
-            marketingShare.titles.forEach(title => {
+            titles.forEach(title => {
                 let th = document.createElement("th");
                 th.innerHTML = title;
                 theadTr.append(th);
             });
             thead.append(theadTr);
-            marketingShare.data.forEach(item => {
+            datas.forEach(item => {
                 let tbodyTr = document.createElement("tr");
                 Object.values(item).forEach(value =>{
                     let td = document.createElement("td");
