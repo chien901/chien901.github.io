@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Fetch JSON動態生成City&District下拉式選單</h1>
+
+    <select id="cities">
+    </select>
+
+    <select id="district" disabled="true">
+    </select>
+
+    <input type="submit" value="提交資料" onclick="submitData()" disabled="true">
+    <div id='msg'></div>
+
+    <script>
+
+        const url = 'https://raw.githubusercontent.com/chien901/FileStorage/main/TaiwanAddress_Simple.json'
+
+        const citySelect = document.getElementById('cities');
+        const districtSelect = document.getElementById('district');
+        const submit = document.querySelector("input[type=submit]");
+        const divMsg = document.getElementById('msg');
+
+        window.onload = createSelect;
+
+        function createSelect() {
+            let option1 = document.createElement('option')
+                option1.value = '-1'
+                option1.text = '---請選擇縣市---'
+                option1.setAttribute('selected', '')
+                citySelect.add(option1, 0)
+
+                let option2 = document.createElement('option')
+                option2.value = '-1'
+                option2.text = '---請選擇行政區---'
+                option2.setAttribute('selected', '')
+                districtSelect.add(option2, 0)
+
+            fetch(url).then(response => response.json()).then(result => {
+                result.forEach((city, index) => {
+                    let option3 = document.createElement('option')
+                    option3.value = index
+                    option3.text = city.city
+
+                    citySelect.add(option3, null)
+                })
+
+                let selectedCityValue, selectedCityText, selectedDistrictValue, selectedDistrictText
+
+                citySelect.onchange = function () {
+                    divMsg.innerText=''
+                    selectedCityValue = citySelect.selectedOptions[0].value
+                    selectedCityText = citySelect.selectedOptions[0].text
+
+                    districtSelect.length = 1
+
+                    if(selectedCityValue=='-1'){
+                        districtSelect.disabled=true
+                        submit.disabled=true
+                    }
+                    else{
+                        districtSelect.disabled=false
+                        let districtArray = result[selectedCityValue].district
+    
+                        districtArray.forEach(dt => {
+                            let opt = document.createElement('option')
+                            opt.value = dt.zipcode
+                            opt.text = `${dt.zipcode} ${dt.district}`
+    
+                            districtSelect.add(opt)
+                        })
+                    }
+                }
+
+                districtSelect.onchange = function () {
+                    divMsg.innerText=''
+                    selectedDistrictText=districtSelect.selectedOptions[0].text
+                    selectedDistrictValue=districtSelect.selectedOptions[0].value
+                    if(selectedDistrictValue=='-1'){
+                        submit.disabled=true
+                    }
+                    else{
+                        submit.disabled=false
+                        divMsg.innerText = selectedCityText + ", " + selectedDistrictText;
+                    }
+                }
+            })
+        }
+
+        function submitData() {
+            let formData = new FormData();
+            formData.append('city', citySelect.selectedOptions[0].text);
+            formData.append('district', districtSelect.selectedOptions[0].text);
+
+            let request = new XMLHttpRequest();
+            request.open("POST", "https://www.codemagic.com.tw");
+            request.send(formData);
+        }
+    </script>
+</body>
+
+</html>
