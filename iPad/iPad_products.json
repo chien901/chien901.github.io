@@ -1,0 +1,102 @@
+[
+    {
+        "title": "外觀",
+        "type": [
+            {
+                "spec": "<i class='fas fa-circle' style='color:#B1B4B6'></i>",
+                "instruction": "太空灰色",
+                "productPic": "ipad-air-select-spacegray.png"
+            },
+            {
+                "spec": "<i class='fas fa-circle' style='color:#DFE1E0'></i>",
+                "instruction": "銀色",
+                "productPic": "ipad-air-select-silver.png"
+            },
+            {
+                "spec": "<i class='fas fa-circle' style='color:#CCDDC9'></i>",
+                "instruction": "綠色",
+                "productPic": "ipad-air-select-green.png"
+            },
+            {
+                "spec": "<i class='fas fa-circle' style='color:#EBCAC3'></i>",
+                "instruction": "玫瑰金色",
+                "productPic": "ipad-air-select-gold.png"
+            },
+            {
+                "spec": "<i class='fas fa-circle' style='color:#CAD9E5'></i>",
+                "instruction": "天藍色",
+                "productPic": "ipad-air-select-blue.png"
+            }
+        ]
+    },
+    {
+        "title": "儲存裝置",
+        "type": [
+            {
+                "spec": "64GB",
+                "instruction": "NT$18900 起",
+                "price": [
+                    18900,
+                    23200
+                ]
+            },
+            {
+                "spec": "256GB",
+                "instruction": "NT$23900 起",
+                "price": [
+                    23900,
+                    28200
+                ]
+            }
+        ],
+        "caption": "<strong>提前為日後預留空間。</strong>你的iPad儲存空間愈大，你就有愈多空間儲存數位內容，滿足現在和未來所需。",
+        "modal": [
+            {
+                "title": "空間大有餘裕。",
+                "content": [
+                    "你需要多少儲存空間取決於你使用iPad的方式。更多儲存空間，代表你能儲存更多的app、音樂、電影和書籍，同時還可讓你製作並儲存影像、影片、插圖和更多內容。",
+                    "經年累月之下，你可能會為 iPad 添加更多內容，所以也應考慮未來儲存空間需求的變化。"
+                ],
+                "ps": [
+                    "儲存空間是以 gigabyte (GB) 和 terabytes (TB) 計算。",
+                    "注意：1GB = 10億位元組；可用儲存空間會隨著眾多因素而減少並有所差異。標準配置會視機型與設定，使用約 10GB 至 13GB 的空間(包括iPadOS與預先安裝的 app)。預先安裝的 app 約會佔用4GB，你可以隨時刪除和回復這些app。儲存容量可能根據軟體版本變動，並可能因裝置而異。"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "連線能力",
+        "type": [
+            {
+                "spec": "Wi-Fi",
+                "instruction": "NT$18900 起",
+                "price": []
+            },
+            {
+                "spec": "Wi-Fi+Mobile",
+                "instruction": "NT$23200 起",
+                "price": []
+            }
+        ],
+        "caption": "<strong>兩種快速的方式，讓你時時保持聯繫。</strong>每部iPad都可連接到 Wi-Fi網路。Wi-Fi + 行動網路機型則讓你在無法使用 Wi-Fi 時，也能連上線。",
+        "modal": [
+            {
+                "title": "透過 Wi-Fi 6 進行更快速的無線連線。",
+                "content": [
+                    "iPad Air 支援 Wi-Fi 6 技術，能快速連線至家中、咖啡店、學校圖書館或機場的 Wi-Fi 網路。"
+                ],
+                "ps": []
+            },
+            {
+                "title": "透過行動數據隨時隨地保持聯繫。",
+                "content": [
+                    "當你身處在沒有 Wi-Fi 的地方，Wi-Fi + 行動網路機型的 iPad Air 能讓你享用快速的行動數據網路服務。",
+                    "<ul><li>eSIM 能讓你輕鬆在 iPad 上直接設定行動網路連線，不必長期綁約。或只要插入已啟用電信服務的 SIM 卡。</li><li>瀏覽網頁、傳送電子郵件和訊息，取用檔案等操作，隨時隨地，隨手可得。</li><li>與親朋好友保持聯繫，或與同事們一起協作。</li><li>使用特定電信業者提供的 Gigabit 等級 LTE。</li><li>在全球 180 多個國家和地區旅行時，加購行動數據服務並保持聯繫。</li><li>有多家電信業者合作夥伴可供選擇，或可加入你現有的方案。</li></ul>"
+                ],
+                "ps": [
+                    "* 並非所有電信業者均支援 Apple SIM 與eSIM。詳情請洽詢你的電信業者。不適用於中國大陸。eSIM 技術適用於 iPad Pro 11 吋 (第 2 代)、iPad Pro 12.9吋 (第 4 代)、iPad Air (第 3 代)、iPad (第 7 代) 與 iPad mini (第 5 代)。Apple SIM適用於 iPad Pro 9.7 吋、iPad Pro 10.5 吋、iPad (第 5 代與第 6 代)、iPad Air 2、iPad mini 3 與 iPad mini 4。"
+                ]
+            }
+        ]
+    }
+]
